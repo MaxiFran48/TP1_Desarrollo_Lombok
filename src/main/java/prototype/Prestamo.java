@@ -1,9 +1,15 @@
 package main.java.prototype;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import main.java.builder.Usuario;
 import main.java.factory.Libro;
 import java.time.LocalDate;
 
+@ToString
+@Getter
+@Setter
 public class Prestamo implements Cloneable{
 
     private Libro libro;
@@ -25,47 +31,5 @@ public class Prestamo implements Cloneable{
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    /**Metodo que nos permite mostrar los prestamos**/
-    @Override
-    public String toString() {
-        return "Préstamo:" +
-                "\n  Libro = " + libro.getTitulo() + " (" + libro.getTipo() + ")" +
-                "\n" + usuario +
-                "\n  Fecha de inicio = " + fechaInicio +
-                "\n  Fecha de fin = " + fechaFin;
-    }
-
-    public Libro getLibro() {
-        return libro;
-    }
-
-    public void setLibro(Libro libro) {
-        this.libro = libro;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public LocalDate getFechaInicio() {
-        return fechaInicio;
-    }
-
-    public void setFechaInicio(LocalDate fechaInicio) {
-        this.fechaInicio = fechaInicio;
-    }
-
-    public LocalDate getFechaFin() {
-        return fechaFin;
-    }
-
-    public void setFechaFin(LocalDate fechaFin) {
-        this.fechaFin = fechaFin;
     }
 }

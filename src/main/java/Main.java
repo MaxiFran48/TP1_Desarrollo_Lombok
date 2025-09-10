@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
 
         /**Creamos un usuario**/
-        Usuario u1 = new Usuario.Builder()
+        Usuario u1 = Usuario.builder()
                 .nombre("Juan")
                 .email("juan@gmail.com")
                 .direccion("Av. San Martin")
@@ -29,7 +29,7 @@ public class Main {
         System.out.println("----------------------------------------------------------------------");
 
         /**Creamos otro usuario**/
-        Usuario u2 = new Usuario.Builder()
+        Usuario u2 = Usuario.builder()
                 .nombre("Federico")
                 .email("fede@gmail.com")
                 .direccion("Av. San Martin")
